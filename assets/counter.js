@@ -41,7 +41,7 @@ function logEnteredIP(ip) {
     // This is a simplified example for demonstration purposes
     // Appending IP to the file each time the function is called
     let fs = require('fs');
-    fs.appendFileSync('entered-ips.txt', ip + '\n');
+    fs.appendFileSync('/entered-ips.txt', ip + '\n');
 }
 
 // Call the increment function when the page loads
