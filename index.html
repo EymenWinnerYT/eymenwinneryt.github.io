@@ -10,6 +10,27 @@
         </style>
     </head>
     <body>
+        <script>
+            // Function to increment and display the visitor count
+            function incrementAndDisplayCount() {
+                // Get the current count from local storage, default to 0 if not set
+                let currentCount = parseInt(localStorage.getItem('visitorCount')) || 0;
+    
+                // Increment the count
+                currentCount++;
+    
+                // Update the local storage with the new count
+                localStorage.setItem('visitorCount', currentCount);
+    
+                // Update the span element with the new count
+                document.getElementById('visitorCount').textContent = currentCount;
+            }
+    
+            // Call the increment function when the page loads
+            window.onload = function() {
+                incrementAndDisplayCount();
+            };
+        </script>
         <div class="banner">
         <table border="2" class="merkez">
             <tr>
@@ -26,5 +47,7 @@
         <h2><marquee direction="left">Welcome to the Eymen's Epic Minecraft Website!</marquee></h2>
         <p>You can find stuff about minecraft and old minecraft!<br>
         Also games and tech, hand-made or other.</p>
+        <h2>Visitor counter:</h2>
+        <a id="visitorCount"><h3></h3></a>
     </body>
 </html>
