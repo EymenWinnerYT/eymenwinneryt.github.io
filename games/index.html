@@ -5,19 +5,6 @@
         <link rel="stylesheet" href="/assets/css1.css">
     </head>
     <body>
-        <script>
-            // Function to toggle the color of the text
-            function toggleColor() {
-              var flashingText = document.getElementById('flashingText');
-              var currentColor = flashingText.style.color;
-          
-              // Toggle between red and blue colors
-              flashingText.style.color = (currentColor === 'green') ? 'blue' : 'red';
-            }
-          
-            // Set interval to toggle color every 100 milliseconds (adjust as needed for faster blinking)
-            setInterval(toggleColor, 100);
-          </script>
         <h1>Games</h1>
         <h3>You can find hand-made online games here!<br> It's <u>100% free!</u></h3>
         <hr />
@@ -27,7 +14,7 @@
                 <td>
                     <font color="red"><h3>Eymen's Online Car Driver</h3></font>
                     <p>Category: Adventure<br> Programming Landguage: JavaScript <br> Release Date: 31.1.2024</p>
-                    <h4 id="flashingText" class="yesil">ONLINE</p>
+                    <div class="yesil"><h4 class="flasher">ONLINE</h4></div>
                 </td>
                 <td>
                     <a href="cardriver.html"><h4>ENTER</h4></a>
