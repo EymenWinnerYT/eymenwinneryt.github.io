@@ -31,7 +31,7 @@ body {
     .sigtext { font-family: 'CustomFont', sans-serif; }
     .dev { font-size: 100px; }
     .buyuk { font-size: 65px; }
-    .soldan-uzak { margin-left: 65px; }
+    .soldan-uzak { margin-left: 25px; }
     .ayni-satirda-foto img {
     display: inline-block;
     margin-right: 10px; /* İsterseniz boşluk bırakabilirsiniz */
