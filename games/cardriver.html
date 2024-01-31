@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CAR DRIVER - GAMES - Eymen's Website</title>
-        <style>
-            .container { background-size: cover; }
-            .road { width: 400px; height: 100vh; background-color: black; margin: auto; position: relative; border-left: 7px dashed white; border-right: 7px dashed white; }
-            .line { width: 10px; height: 100px;  }
-            .car { width: 50px; height:80px; background-color: black; position: absolute; bottom: 120px; background-image: url('/assets/green.png'); background-size: cover;  }
-        </style>
-        <body>
-            <div class="container">
-                <div class="road">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Araba Oyunu</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
 
-                </div>
-            </div>
-        </body>
-    </head>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let car = {
+            x: 200,
+            y: 300,
+            width: 50,
+            height: 80,
+            color: 'blue',
+            speed: 5
+        };
+
+        function drawCar() {
+            ctx.fillStyle = car.color;
+            ctx.fillRect(car.x, car.y, car.width, car.height);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function updateGameArea() {
+            clearCanvas();
+            drawCar();
+        }
+
+        window.addEventListener('keydown', function (e) {
+            switch (e.key) {
+                case 'ArrowLeft':
+                    car.x -= car.speed;
+                    break;
+                case 'ArrowRight':
+                    car.x += car.speed;
+                    break;
+            }
+        });
+
+        function gameLoop() {
+            updateGameArea();
+            requestAnimationFrame(gameLoop);
+        }
+
+        gameLoop();
+    </script>
+</body>
 </html>
