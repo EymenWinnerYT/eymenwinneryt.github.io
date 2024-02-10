@@ -24,12 +24,12 @@ var x = setInterval(function() {
   countdownSeconds--;
 
   // Display the remaining seconds
-  document.getElementById("countdown").innerHTML = countdownSeconds + "s";
+  document.getElementById("countdown").innerHTML = countdownSeconds;
 
   // If the countdown is over, display a message and stop the timer
   if (countdownSeconds <= 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "LOADING!!";
+    document.getElementById("countdown").innerHTML = "REDIRECTING!!";
   }
 }, 1000);
 </script>
