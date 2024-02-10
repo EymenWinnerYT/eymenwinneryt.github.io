@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create PNG File</title>
+</head>
+<body>
+
+<button onclick="createPNG()">PNG Dosyası Oluştur</button>
+
+<script>
+function createPNG() {
+    // Canvas elementini oluştur
+    var canvas = document.createElement('canvas');
+    canvas.width = 200; // Genişlik
+    canvas.height = 200; // Yükseklik
+
+    // Canvas'ta çizim yap
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'green';
+    ctx.fillRect(0, 0, 200, 200);
+
+    // Canvas içeriğini PNG dosyasına dönüştürme
+    var imgData = canvas.toDataURL("image/png");
+
+    // PNG dosyasını indirme linki oluştur
+    var downloadLink = document.createElement('a');
+    downloadLink.href = imgData;
+    downloadLink.download = 'canvas_image.png'; // İndirilecek dosya adı
+    downloadLink.click();
+}
+</script>
+
+</body>
+</html>
