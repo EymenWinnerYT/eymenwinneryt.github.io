@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="5;url=/v1.0/home.html" />
 <title>Countdown Timer</title>
 </head>
 <body>
@@ -14,6 +13,16 @@
 <h4>If it's not work, <a href=/v1.0/home.html>click here</a>.</h4>
 
 <script>
+
+setTimeout(function() {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.href = '/v1.0mobile/home.html';
+        } else {
+            window.location.href = '/v1.0/home.html';
+        }
+    }, 5000); // 5 saniye bekletme
+
 // Set the countdown duration in seconds
 var countdownSeconds = 5;
 
