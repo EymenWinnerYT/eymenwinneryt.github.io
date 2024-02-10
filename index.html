@@ -7,8 +7,11 @@
 <title>Countdown Timer</title>
 </head>
 <body>
+<h3>Welcome to eymenwinneryt.github.io!</h3>
+<h3>You will be redirect in <a id="countdown"></a> seconds!</h3>
 
-<div id="countdown"></div>
+<br><br>
+<h4>If it's not work, <a href=/v1.0/home.html>click here</a>.</h4>
 
 <script>
 // Set the countdown duration in seconds
@@ -26,7 +29,7 @@ var x = setInterval(function() {
   // If the countdown is over, display a message and stop the timer
   if (countdownSeconds <= 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    document.getElementById("countdown").innerHTML = "LOADING!!";
   }
 }, 1000);
 </script>
