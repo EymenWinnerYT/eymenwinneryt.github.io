@@ -3,32 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create PNG File</title>
+<title>Text to Image</title>
 </head>
 <body>
 
-<button onclick="createPNG()">PNG Dosyası Oluştur</button>
+<input type="text" id="textInput" placeholder="Metni girin">
+<button onclick="textToImage()">Metni Resme Dönüştür</button>
+<br>
+<img id="outputImage">
 
 <script>
-function createPNG() {
+function textToImage() {
+    var text = document.getElementById('textInput').value;
+    
     // Canvas elementini oluştur
     var canvas = document.createElement('canvas');
-    canvas.width = 200; // Genişlik
-    canvas.height = 200; // Yükseklik
+    canvas.width = 300; // Genişlik
+    canvas.height = 100; // Yükseklik
 
     // Canvas'ta çizim yap
     var ctx = canvas.getContext('2d');
-    ctx.fillStyle = 'green';
-    ctx.fillRect(0, 0, 200, 200);
+    ctx.fillStyle = 'white'; // Arka plan rengi
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = '20px Arial'; // Yazı tipi ve boyutu
+    ctx.fillStyle = 'black'; // Yazı rengi
+    ctx.fillText(text, 10, 50); // Metni çiz
 
-    // Canvas içeriğini PNG dosyasına dönüştürme
+    // Canvas içeriğini PNG formatında bir resme dönüştürme
     var imgData = canvas.toDataURL("image/png");
 
-    // PNG dosyasını indirme linki oluştur
-    var downloadLink = document.createElement('a');
-    downloadLink.href = imgData;
-    downloadLink.download = 'canvas_image.png'; // İndirilecek dosya adı
-    downloadLink.click();
+    // Resmi göster
+    var outputImage = document.getElementById('outputImage');
+    outputImage.src = imgData;
 }
 </script>
 
