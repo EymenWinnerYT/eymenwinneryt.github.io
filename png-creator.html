@@ -11,6 +11,8 @@
 <button onclick="textToImage()">Metni Resme Dönüştür</button>
 <br>
 <img id="outputImage">
+<br>
+<a id="downloadLink" download="text_image.png"><button>Resmi İndir</button></a>
 
 <script>
 function textToImage() {
@@ -35,6 +37,10 @@ function textToImage() {
     // Resmi göster
     var outputImage = document.getElementById('outputImage');
     outputImage.src = imgData;
+
+    // İndirme bağlantısını güncelle
+    var downloadLink = document.getElementById('downloadLink');
+    downloadLink.href = imgData;
 }
 </script>
 
