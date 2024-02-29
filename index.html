@@ -3,44 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Countdown Timer</title>
+<title>Redirecting..</title>
 </head>
 <body>
-<h3>Welcome to <font color="blue">eymenwinneryt.github.io</font>!</h3>
-<h3>You will be redirect in <a id="countdown"></a> seconds!</h3>
-
-<br><br>
-<h4>If it's not work, <a href=/v1.0/home.html>click here</a>.</h4>
-
 <script>
-
-setTimeout(function() {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (isMobile) {
             window.location.href = '/v1.0mobile/home.html';
         } else {
             window.location.href = '/v1.0/home.html';
         }
-    }, 5000); // 5 saniye bekletme
-
-// Set the countdown duration in seconds
-var countdownSeconds = 5;
-
-// Update the countdown every second
-var x = setInterval(function() {
-
-  // Decrease the remaining time by 1 second
-  countdownSeconds--;
-
-  // Display the remaining seconds
-  document.getElementById("countdown").innerHTML = countdownSeconds;
-
-  // If the countdown is over, display a message and stop the timer
-  if (countdownSeconds <= 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "REDIRECTING!!";
-  }
-}, 1000);
 </script>
 
 </body>
