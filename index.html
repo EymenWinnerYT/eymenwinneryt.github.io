@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (isMobile) {
+              document.write = '<meta http-equiv="refresh" content="0; url=/v1.0Mobile/" />';
+          } else {
+            document.write = '<meta http-equiv="refresh" content="0; url=/v1.0/" />';
+          }
+  </script>
 <title>Redirecting..</title>
 </head>
 <body>
-<script>
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (isMobile) {
-            window.location.href = '/v1.0mobile/home.html';
-        } else {
-            window.location.href = '/v1.0/home.html';
-        }
-</script>
-
 </body>
 </html>
