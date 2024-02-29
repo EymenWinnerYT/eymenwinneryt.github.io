@@ -22,7 +22,6 @@ body {
     padding: 10px;
     }
     hr { width: 3; }
-    table { margin: 0 auto; }
     .merkez { text-align: center; }
     .banner { background-image: url('/assets/ltown.png'); }
     .flasher { background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/69/Color_Flash.gif') }
