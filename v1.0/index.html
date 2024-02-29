@@ -3,13 +3,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/assets/css1.css">
+<audio src="/assets/town.mp3"></audio>
 <title>Eymen's Minecraft Website 1.0</title>
 </head>
 <body>
 <script>
-window.addEventListener('DOMContentLoaded', (event) => {
-    var audio = new Audio('/assets/town.mp3'); // Ses dosyasının yolunu belirtin
-    audio.play();
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.2;
+  audio.play();
 });
 </script>    
 <table border="2"><tr><td>
