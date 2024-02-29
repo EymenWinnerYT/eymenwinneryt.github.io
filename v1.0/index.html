@@ -6,11 +6,10 @@
 <title>Eymen's Minecraft Website 1.0</title>
 </head>
 <body>
-<audio id="audioPlayer" src="/assets/town.mp3" autoplay></audio>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  var audio = document.getElementById("audioPlayer");
-  audio.play();
+window.addEventListener('DOMContentLoaded', (event) => {
+    var audio = new Audio('/assets/town.mp3'); // Ses dosyasının yolunu belirtin
+    audio.play();
 });
 </script>    
 <table border="2"><tr><td>
