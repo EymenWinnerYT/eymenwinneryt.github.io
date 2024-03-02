@@ -29,7 +29,7 @@ body {
     .yesil { color: green; }
     .sigtext { font-family: 'CustomFont', sans-serif; }
     .dev { font-size: 100px; }
-    .buyuk { font-size: 65px; }
+    .buyuk { font-size: 65px; display: inline-block;}
     .soldan-uzak { margin-left: 25px; }
     .ayni-satirda-foto img {
     display: inline-block;
