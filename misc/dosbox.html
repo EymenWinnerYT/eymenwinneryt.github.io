@@ -21,24 +21,24 @@
     <a href="about.html" target="_blank">About</a>    
 </td></tr><tr style="background-color: powderblue"><td>"
 <br><br><h2>Dosbox Emulator</h2><br><h3>Here is the DosBox emulator in web, it is powered by JS-DOS and you can run old games and applications<br>with this.</h3><br><br><br><canvas id="dosbox" width="640" height="400"></canvas>
-<script src="jsdos.min.js"></script>
-<script>
-    var canvas = document.getElementById('dosbox');
-    var dosbox = new Dosbox({
-        id: 'dosbox',
-        wdosboxUrl: 'jsdos/wdosbox.js',
-        onRun: function (dosbox) {
-            dosbox.run("your_dos_program.exe");
-        },
-        onProgress: function (dosbox, progress) {
-            console.log(progress);
-        }
-    });
+<script src="https://js-dos.com/cdn/js-dos.js"></script>
+    <script>
+        var canvas = document.getElementById('dosbox');
+        var dosbox = new Dosbox({
+            id: 'dosbox',
+            wdosboxUrl: 'https://js-dos.com/cdn/wdosbox.js',
+            onRun: function (dosbox) {
+                dosbox.run("your_dos_program.exe");
+            },
+            onProgress: function (dosbox, progress) {
+                console.log(progress);
+            }
+        });
 
-    dosbox.ui.on('load', function (item) {
-        if (item === 'jsdos/wdosbox.js') {
-            dosbox.run("your_dos_program.exe");
-        }
-    });
-</script>
+        dosbox.ui.on('load', function (item) {
+            if (item === 'https://js-dos.com/cdn/wdosbox.js') {
+                dosbox.run("your_dos_program.exe");
+            }
+        });
+    </script>
 </td></tr></table></body></html>
