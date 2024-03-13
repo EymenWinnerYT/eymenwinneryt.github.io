@@ -28,7 +28,7 @@
             id: 'dosbox',
             wdosboxUrl: 'https://js-dos.com/cdn/wdosbox.js',
             onRun: function (dosbox) {
-                dosbox.run("your_dos_program.exe");
+                // You can leave this empty since you don't want to run any program immediately
             },
             onProgress: function (dosbox, progress) {
                 console.log(progress);
@@ -37,7 +37,9 @@
 
         dosbox.ui.on('load', function (item) {
             if (item === 'https://js-dos.com/cdn/wdosbox.js') {
-                dosbox.run("your_dos_program.exe");
+                // This function will be called once the wdosbox.js file is loaded
+                // You can optionally display the index menu here
+                dosbox.run("dir");
             }
         });
     </script>
