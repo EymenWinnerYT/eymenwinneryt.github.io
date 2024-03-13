@@ -27,27 +27,31 @@
     <a href="contact.html" target="_blank">Contact</a> |
     <a href="about.html" target="_blank">About</a>    
 </td></tr><tr><td>"
-<br><br><h2>Dosbox Emulator</h2><br><h3>Here is the DosBox emulator in web, it is powered by JS-DOS and you can run old games and applications<br>with this.</h3><br><br><br><canvas id="dosbox" width="640" height="400"></canvas>
+<br><br><h2>Dosbox Emulator</h2><br><h3>Here is the DosBox emulator in web, it is powered by JS-DOS and you can run old games and applications<br>with this.</h3><br><br><br>
+<canvas id="dosbox" width="640" height="400"></canvas>
 <script src="https://js-dos.com/cdn/js-dos.js"></script>
-    <script>
-        var canvas = document.getElementById('dosbox');
-        var dosbox = new Dosbox({
-            id: 'dosbox',
-            wdosboxUrl: 'https://js-dos.com/cdn/wdosbox.js',
-            onRun: function (dosbox) {
-                // You can leave this empty since you don't want to run any program immediately
-            },
-            onProgress: function (dosbox, progress) {
-                console.log(progress);
-            }
-        });
+<script>
+    console.log("Before JS-DOS initialization");
+    var canvas = document.getElementById('dosbox');
+    var dosbox = new Dosbox({
+        id: 'dosbox',
+        wdosboxUrl: 'https://js-dos.com/cdn/wdosbox.js',
+        onRun: function (dosbox) {
+            // You can leave this empty since you don't want to run any program immediately
+        },
+        onProgress: function (dosbox, progress) {
+            console.log(progress);
+        }
+    });
 
-        dosbox.ui.on('load', function (item) {
-            if (item === 'https://js-dos.com/cdn/wdosbox.js') {
-                // This function will be called once the wdosbox.js file is loaded
-                // You can optionally display the index menu here
-                dosbox.run("dir");
-            }
-        });
-    </script>
+    dosbox.ui.on('load', function (item) {
+        console.log("JS-DOS loaded:", item);
+        if (item === 'https://js-dos.com/cdn/wdosbox.js') {
+            // This function will be called once the wdosbox.js file is loaded
+            // You can optionally display the index menu here
+            dosbox.run("dir");
+        }
+    });
+    console.log("After JS-DOS initialization");
+</script>
 </td></tr></table></body></html>
