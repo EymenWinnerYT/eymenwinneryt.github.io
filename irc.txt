@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<title>IRC - Eymenwinneryt's website</title>
+<style>
+body {background-image: url('https://web.archive.org/web/19961023235157id_/http://windows95.com/gifs/back/sky_tile.gif');}
+.white-bg {background-color: white;}
+.blue {color: blue;}
+.right-sided {text-align: right;}   
+.in-same-line {display: inline-block;} 
+</style>
+</head>
+<body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<iframe src="/qwebirc/"></iframe>
+<br><br>
+<h3>Here is my IRC Server, you must see an IRC Client window above.<br> If you dont see anything you can use modern browsers or IRC Client.<br> Example i use <a href="https://adilirc.com">AdilIRC</a>.</h3>
