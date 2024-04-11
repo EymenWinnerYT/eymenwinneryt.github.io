@@ -21,4 +21,17 @@ body {background-image: url('https://web.archive.org/web/19961023235157id_/http:
 <hr><br><br>
 <p>Here is my Mineraft Chat Spammer. Are you annoyed from annoying servers/players? This app is for you! This app<br>has been made by VBScript, and i compiled it to .exe file by<br>app named <strong>"Vbs To Exe"</strong>.</p>
 <br><br><br><br><br>
-<a href="EymChatSpammer.exe"><h3>Download EymenWinnerYT's Minecraft Chat Spammer now - FREE!</h3></a>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const downloadLink = document.getElementById('downloadLink');
+    const downloadCount = document.getElementById('downloadCount');
+    let count = 0; // This will reset on page reload
+
+    downloadLink.addEventListener('click', () => {
+        count++;
+        downloadCount.textContent = count;
+    });
+});
+</script>
+<a href="EymChatSpammer.exe" id="downloadLink"><h3>Download EymenWinnerYT's Minecraft Chat Spammer now - FREE!</h3></a>
+<p><font color="red"><strong>Download Counter: </strong></font><a id="downloadCount"></p>
